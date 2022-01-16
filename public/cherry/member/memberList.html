@@ -1,120 +1,90 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../exLibrary/css_bootstrap.css" rel="stylesheet">
+
+    <style>
+        .body {
+            background-image: url("./background.png");
+            background-size:100%;
+            opacity: 90%;
+        }
+
+        #name{
+            width: 20em;
+        }
+        #id{
+            width: 30em;
+        }
+
+    </style>
     <title>memberList</title>
-
 </head>
+<body class="body">
+<div class="container-fluid" style="width: 80%">
+    <div class="row">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a href="memberForm.html" class="dropdown-item" href="#">회원등록</a></li>
+                <li><a class="dropdown-item" href="#">회원정보삭제</a></li>
+                <li><a href="../../index.html" class="dropdown-item" href="#">Index로 나가기</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<br>
 
-<style>
-    body{
-        background-color: antiquewhite;
-    }
-
-    table {
-        border: 3px solid black;
-        border-collapse: collapse;
-        margin-left: 30px;
-
-    }
-    caption{
-        margin-top: 20px;
-        font-size: 40px;
-        font-family: "Arial Black";
-        font-weight: 600;
-    }
-
-    td {
-        background-color: whitesmoke;
-        border: 1px solid black;
-        padding-left: 11px;
-        height: 40px;
-        text-align: left;
-
-    }
-
-    th {
-        font-family: "Arial Rounded MT Bold";
-        font-size: 18.2px;
-        border: 1.5px solid black;
-        background-color: lightgray;
-
-    }
-
-    hr {
-        border: 0;
-        background-color: dimgray;
-        height: 2px;
-
-        margin-bottom: 25px;
-
-
-        width: 800px;
-        margin-top: 15px;
-        width: 800px;
-    }
-
-    ul{
-        margin-left: 5px;
-    }
-    .name{
-        text-align: left;
-    }
-
-    .memberListControl{
-        font-size: 18px;
-    }
-    
-</style>
-</head>
-<body>
-
-<table>
-    <caption>고객 리스트<hr style="margin-top: -1px;"></caption>
-
-    <tr>
-
-        <th width="80">이름</a></th>
-        <th width="80">아이디</th>
-        <th width="200" height="30">이메일</th>
-        <th width="180">모바일</th>
+<table class="table table-secondary">
+    <thead>
+    <tr class="table-info">     <!-- .table-danger 은 색상-->
+        <th scope="col" id="name">이름</th>
+        <th scope="col" id="ID">아이디</th>
+        <th scope="col">모바일</th>
+        <th scope="col">주소</th>
     </tr>
-
+    </thead>
+    <tbody>
     <tr>
-        <td width="80" class="name"><a href="./memberView.html">유형준</a></td>
-        <td width="80">batort08</td>
-        <td width="80">batort08@gmail.com</td>
-        <td width="80">010-4696-1364</td>
+        <th>유형준</th>
+        <td>bathory08</td>
+        <td>010-4696-1364</td>
+        <td><div data-toggle="tooltip" data-placement="right" title="서울시 용산구 장승배기로 12가길 71">서울시 동작구</div></td>
     </tr>
     <tr>
-        <td class="name">김아무개</td>
-        <td>cheagun</td>
-        <td>cheagun@naver.com</td>
-        <td>010-1234-1234</td>
+        <th scope="row">만수르 빈 자이드 알나얀</th>
+        <td>Kim_amug</td>
+        <td>010-153-7894</td>
+        <td><div data-toggle="tooltip" data-placement="right" title="서울시 노원구 중계동 건영 3차">서울시 노원구</div></td>
     </tr>
     <tr>
-        <td class="name">민수</td>
-        <td>asbsda</td>
-        <td>asbsda@gmail.com</td>
-        <td>010-1234-1111</td>
+        <th scope="row">도널드 트럼프</th>
+        <td>Minsu</td>
+        <td>011-123-4567</td>
+        <td><div data-toggle="tooltip" data-placement="right" title="서울시 서초구 서초동 효령로68길 81">서울시 서초구</div></td>
     </tr>
     <tr>
-        <td class="name">철수</td>
-        <td>fff</td>
-        <td>fff@duam.net</td>
-        <td>016-234-1234</td>
+        <th scope="row">시진핑</th>
+        <td>smallZero</td>
+        <td>016-123-4567</td>
+        <td><div data-toggle="tooltip" data-placement="right" title="서울시 용산구 이태원동">서울시 용산구</div></td>
     </tr>
-    <tr>
-        <td class="name">영희</td>
-        <td>dd</td>
-        <td>dd@gmail.com</td>
-        <td>010-123-1234</td>       
-    </tr>
+
+    </tbody>
 </table>
-<ul>
-<li><a class="memberListControl" href="./memberForm.html">회원등록</a></li>
-<li><a class="memberListControl" href="../../index.html">인덱스로 나가기</a></li>
-</ul>
 
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 </html>
