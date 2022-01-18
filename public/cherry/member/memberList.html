@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -9,82 +10,116 @@
     <style>
         .body {
             background-image: url("./background.png");
-            background-size:100%;
+            background-size: 100%;
             opacity: 90%;
         }
-
-        #name{
+        
+        #name {
             width: 20em;
         }
-        #id{
+        
+        #id {
             width: 30em;
         }
-
     </style>
     <title>memberList</title>
 </head>
+
 <body class="body">
-<div class="container-fluid" style="width: 80%">
-    <div class="row">
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Menu
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a href="memberForm.html" class="dropdown-item" href="#">회원등록</a></li>
-                <li><a class="dropdown-item" href="#">회원정보삭제</a></li>
-                <li><a href="../../index.html" class="dropdown-item" href="#">Index로 나가기</a></li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="margin-left: 9rem;">Menu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../../index.html">Index</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./memberForm.html">회원등록</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./memberForm.html">회원삭제</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" style="margin-right: 9rem;">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-    </div>
-</div>
-<br>
-
-<table class="table table-secondary">
-    <thead>
-    <tr class="table-info">     <!-- .table-danger 은 색상-->
-        <th scope="col" id="name">이름</th>
-        <th scope="col" id="ID">아이디</th>
-        <th scope="col">모바일</th>
-        <th scope="col">주소</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <th>유형준</th>
-        <td>bathory08</td>
-        <td>010-4696-1364</td>
-        <td><div data-toggle="tooltip" data-placement="right" title="서울시 용산구 장승배기로 12가길 71">서울시 동작구</div></td>
-    </tr>
-    <tr>
-        <th scope="row">만수르 빈 자이드 알나얀</th>
-        <td>Kim_amug</td>
-        <td>010-153-7894</td>
-        <td><div data-toggle="tooltip" data-placement="right" title="서울시 노원구 중계동 건영 3차">서울시 노원구</div></td>
-    </tr>
-    <tr>
-        <th scope="row">도널드 트럼프</th>
-        <td>Minsu</td>
-        <td>011-123-4567</td>
-        <td><div data-toggle="tooltip" data-placement="right" title="서울시 서초구 서초동 효령로68길 81">서울시 서초구</div></td>
-    </tr>
-    <tr>
-        <th scope="row">시진핑</th>
-        <td>smallZero</td>
-        <td>016-123-4567</td>
-        <td><div data-toggle="tooltip" data-placement="right" title="서울시 용산구 이태원동">서울시 용산구</div></td>
-    </tr>
-
-    </tbody>
-</table>
+    </nav>
 
 
+    <br>
+
+    <table class="table table-secondary table-dark table-hover">
+        <thead>
+            <tr class="table-info">
+                <!-- .table-danger 은 색상-->
+                <th scope="col" id="name">이름</th>
+                <th scope="col" id="ID">아이디</th>
+                <th scope="col">모바일</th>
+                <th scope="col">주소</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr onClick="location.href='./memberView.html'">
+                <th>유형준</th>
+                <td>bathory08</td>
+                <td>010-4696-1364</td>
+                <td>
+                    <div data-toggle="tooltip" data-placement="right" title="서울시 용산구 장승배기로 12가길 71">서울시 동작구</div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">만수르</th>
+                <td>showMeTheMoney</td>
+                <td>010-153-7894</td>
+                <td>
+                    <div data-toggle="tooltip" data-placement="right" title="서울시 노원구 중계동 건영 3차">서울시 노원구</div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">도널드</th>
+                <td>maiGuo</td>
+                <td>011-123-4567</td>
+                <td>
+                    <div data-toggle="tooltip" data-placement="right" title="서울시 서초구 서초동 효령로68길 81">서울시 서초구</div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">시진핑</th>
+                <td>peace</td>
+                <td>016-123-4567</td>
+                <td>
+                    <div data-toggle="tooltip" data-placement="right" title="서울시 용산구 이태원동">서울시 용산구</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation example" style="margin-left:50rem; margin-top:3rem">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav>
 
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
+
 </html>
