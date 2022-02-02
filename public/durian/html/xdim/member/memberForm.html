@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>memberForm</title>
+    <style>
+        #wrap {
+            width: 30%;
+            height: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 6rem;
+        }
+        
+        .logo {
+            position: absolute;
+            top: 10%;
+            left: 40%;
+            font-size: 3rem;
+            font-weight: 900;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .userLoginForm {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 30px, 20px;
+            background-color: #FFFFFF;
+            text-align: center;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 15px;
+        }
+        
+        .idForm {
+            width: 100%;
+            border-bottom: 2px solid #000;
+            margin: 30px;
+            padding: 10px 10px;
+        }
+        
+        .id {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            height: 1.5rem;
+        }
+        
+        .passwordFrom {
+            width: 100%;
+            border-bottom: 2px solid #000;
+            margin: 30px;
+            padding: 10px 10px;
+        }
+        
+        .pw {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            height: 1.5rem;
+        }
+        
+        .btn {
+            position: relative;
+            top: 10px;
+            left: 26px;
+            width: 420px;
+            height: 50px;
+            margin: 5px;
+            background-color: cornflowerblue;
+            color: white;
+            font-size: 25px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        hr {
+            position: relative;
+            top: 5px;
+            left: 26px;
+            width: 430px;
+            border: 1px;
+            height: 2px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+
+
+        <div class="logo">Bi.Shop</div>
+
+        <form action="URL" method="post" class="userLoginForm">
+            <div class="idForm">
+                <input type="text" class="id" placeholder="UserID">
+            </div>
+            <div class="passwordFrom">
+                <input type="password" class="pw" placeholder="password">
+            </div>
+            <div class="passwordFrom">
+                <input type="password" class="pw" placeholder="re-password">
+            </div>
+
+            <br>
+            <div class="idForm">
+                <input type="text" class="id" placeholder="성함">
+            </div>
+            <div class="idForm">
+                <input type="text" class="id" placeholder="모바일">
+            </div>
+            <div class="idForm">
+                <input type="text" class="id" placeholder="이메일">
+            </div>
+
+
+            <button type="button" class="btn" onclick="button()">
+                로그인
+            </button>
+            <button type="button" class="btn" onclick="button()">
+                회원가입    
+            </button>
+            <hr>
+            
+
+
+
+        </form>
+    </div>
+</body>
+
+</html>

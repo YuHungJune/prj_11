@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>memberList</title>
+
+</head>
+
+<style>
+    body{
+        background-color: antiquewhite;
+    }
+
+    table {
+        border: 3px solid black;
+        border-collapse: collapse;
+        margin-left: 30px;
+
+    }
+    caption{
+        margin-top: 20px;
+        font-size: 40px;
+        font-family: "Arial Black";
+        font-weight: 600;
+    }
+
+    td {
+        background-color: whitesmoke;
+        border: 1px solid black;
+        padding-left: 11px;
+        height: 40px;
+        text-align: left;
+
+    }
+
+    th {
+        font-family: "Arial Rounded MT Bold";
+        font-size: 18.2px;
+        border: 1.5px solid black;
+        background-color: lightgray;
+
+    }
+
+    #headline {
+        border: 0;
+        background-color: dimgray;
+        height: 2px;
+
+        margin-bottom: 25px;
+
+
+        width: 800px;
+        margin-top: 15px;
+        width: 800px;
+    }
+    
+    hr{
+    	margin-top: 20px;
+        margin-bottom: 25px;
+		margin-left: -20px;
+
+        width: 800px;
+   
+        width: 800px;
+    }
+
+	button{
+		margin-left: -15px;
+		margin-right: 10px;
+	}
+    ul{
+        margin-left: 5px;
+    }
+    
+    .name{
+        text-align: left;
+    }
+
+    .memberListControl{
+        font-size: 18px;
+    }
+    
+</style>
+</head>
+<body>
+
+<table>
+    <caption>고객 리스트<hr style="margin-top: -1px;" id="headline"></caption>
+
+    <tr>
+
+        <th width="80">이름</a></th>
+        <th width="80">아이디</th>
+        <th width="200" height="30">이메일</th>
+        <th width="180">모바일</th>
+    </tr>
+
+    <tr>
+        <td width="80" class="name"><a href="./memberView.html">유형준</a></td>
+        <td width="80">batort08</td>
+        <td width="80">batort08@gmail.com</td>
+        <td width="80">010-4696-1364</td>
+    </tr>
+    <tr>
+        <td class="name">김아무개</td>
+        <td>cheagun</td>
+        <td>cheagun@naver.com</td>
+        <td>010-1234-1234</td>
+    </tr>
+    <tr>
+        <td class="name">민수</td>
+        <td>asbsda</td>
+        <td>asbsda@gmail.com</td>
+        <td>010-1234-1111</td>
+    </tr>
+    <tr>
+        <td class="name">철수</td>
+        <td>fff</td>
+        <td>fff@duam.net</td>
+        <td>016-234-1234</td>
+    </tr>
+    <tr>
+        <td class="name">영희</td>
+        <td>dd</td>
+        <td>dd@gmail.com</td>
+        <td>010-123-1234</td>       
+    </tr>
+    
+</table>
+
+<ul>
+
+<!-- <li><a class="memberListControl" href="./memberForm.html">회원등록</a></li>
+<li><a class="memberListControl" href="../../index.html">인덱스로 나가기</a></li> -->
+<hr>
+<button type="button" onClick="location.href='../../index.html'" id="clear">인덱스</button>
+<button type="button" onClick="location.href='./memberForm.html'" id="clear">회원등록</button>
+
+</ul>
+
+</body>
+</html>
