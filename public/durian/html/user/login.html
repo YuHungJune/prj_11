@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>login_user</title>
+<style>
+    #wrap{
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 6rem;
+    }
+
+    .logo{
+        font-size: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .input-box{ position:relative; margin:10px 0; }
+    .input_box > input{ 
+        background:transparent; 
+        border:none; 
+        border-bottom: solid 1px #ccc; 
+        padding:20px 0px 5px 0px; 
+        font-size:14pt; 
+        width:100%; 
+    }
+    input::placeholder{ color:transparent; }
+
+    input:placeholder-shown + label{ color:#aaa; font-size:14pt; top:15px; 
+    }
+ 
+    input:focus + label, label{
+    color:#8aa1a1;
+    font-size:10pt;
+    pointer-events: none;
+    position: absolute;
+    left:0px;
+    top:0px;
+    transition: all 0.2s ease ;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+input:focus, input:not(:placeholder-shown){ 
+    border-bottom: solid 1px #8aa1a1; 
+    outline:none; 
+}
+
+
+</style>
+</head>
+<body>
+    <div id="wrap">
+        <center>
+        <div class="logo">June'Shop</div>
+        <div style="font-size: 2rem;">로그인</div>
+
+        <form action="" method="POST" style="margin-top: 5rem;"> 
+            <div class="input_box" > 
+                <input id="username" type="text" name="username" placeholder="아이디"> 
+                <label for="username">아이디</label> 
+            </div> 
+            <div class="input_box"> 
+                <input id="password" type="password" name="password" placeholder="비밀번호"> 
+                    <label for="password">비밀번호
+
+                    </label> </div> 
+                    <div id="forgot">
+                        비밀번호 찾기
+                    </div> <input type="submit" value="로그인"> 
+        </form>
+
+
+        </center>
+    </div>
+</body>
+</html>

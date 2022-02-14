@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>memberForm</title>
+    <title>login_user</title>
     <style>
         #wrap {
-            width: 30%;
-            height: 1000px;
+            width: 60%;
+            height: 1400px;
             margin-left: auto;
             margin-right: auto;
             margin-top: 6rem;
@@ -15,9 +15,9 @@
         
         .logo {
             position: absolute;
-            top: 10%;
-            left: 40%;
-            font-size: 3rem;
+            top: 11rem;
+            left: 29.5%;
+            font-size: 8rem;
             font-weight: 900;
             margin-top: 1rem;
             margin-bottom: 1rem;
@@ -25,15 +25,15 @@
         
         .userLoginForm {
             position: absolute;
-            width: 400px;
+            width: 41rem;
             height: 400px;
             margin-left: auto;
             margin-right: auto;
-            padding: 30px, 20px;
+            padding: 20px, 10px;
             background-color: #FFFFFF;
             text-align: center;
-            top: 45%;
-            left: 50%;
+            top: 42rem;
+            left: 42.5%;
             transform: translate(-50%, -50%);
             border-radius: 15px;
         }
@@ -41,22 +41,22 @@
         .idForm {
             width: 100%;
             border-bottom: 2px solid #000;
-            margin: 30px;
+            margin: 70px;
             padding: 10px 10px;
         }
         
-        .id {
+        .text {
             width: 100%;
             border: none;
             outline: none;
-            font-size: 1rem;
-            height: 1.5rem;
+            font-size: 3rem;
+            height: 3rem;
         }
         
         .passwordFrom {
             width: 100%;
             border-bottom: 2px solid #000;
-            margin: 30px;
+            margin: 70px;
             padding: 10px 10px;
         }
         
@@ -64,20 +64,21 @@
             width: 100%;
             border: none;
             outline: none;
-            font-size: 1rem;
-            height: 1.5rem;
+            font-size: 3rem;
+            height: 3rem;
         }
         
         .btn {
             position: relative;
-            top: 10px;
-            left: 26px;
-            width: 420px;
-            height: 50px;
+            top: 43px;
+            left: 10%;
+            width: 42rem;
+            height: 90px;
             margin: 5px;
             background-color: cornflowerblue;
             color: white;
-            font-size: 25px;
+            font-size: 50px;
+            font-weight: 600;
             border: none;
             cursor: pointer;
         }
@@ -85,11 +86,15 @@
         hr {
             position: relative;
             top: 5px;
-            left: 26px;
+            left: 30px;
             width: 430px;
             border: 1px;
             height: 2px;
             background-color: gray;
+        }
+        
+        footer {
+            background-color: darkgrey;
         }
     </style>
 </head>
@@ -102,40 +107,38 @@
 
         <form action="URL" method="post" class="userLoginForm">
             <div class="idForm">
-                <input type="text" class="id" placeholder="UserID">
+                <input type="text" class="text" placeholder="UserID">
             </div>
             <div class="passwordFrom">
-                <input type="password" class="pw" placeholder="password">
+                <input type="password" class="pw" id="pw" placeholder="password">
             </div>
             <div class="passwordFrom">
-                <input type="password" class="pw" placeholder="re-password">
+                <input type="password" class="pw" id="repw" placeholder="re-password">
             </div>
 
-            <br>
             <div class="idForm">
-                <input type="text" class="id" placeholder="성함">
+                <input type="text" class="text" id="name" placeholder="name">
             </div>
             <div class="idForm">
-                <input type="text" class="id" placeholder="모바일">
+                <input type="text" class="text" id="email" placeholder="email">
             </div>
             <div class="idForm">
-                <input type="text" class="id" placeholder="이메일">
+                <input type="text" class="text" id="mobile" placeholder="mobile">
             </div>
+
 
 
             <button type="button" class="btn" onclick="button()">
-                로그인
+                회원가입
             </button>
-            <button type="button" class="btn" onclick="button()">
-                회원가입    
-            </button>
-            <hr>
-            
+
+
 
 
 
         </form>
     </div>
+
 </body>
 
 </html>
