@@ -1,63 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Insert title here</title>
+    <title>login_user</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <title>main</title>
 
     <style>
-        .wrap {
-            width: 100%;
+        #wrap {
+            width: 90%;
             height: 1400px;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 1rem;
-        }
-        
-        .header {
-            position: absolute;
-            top: 0%;
-            left: 0%;
-            background-color: white;
-            width: 100%;
-            padding-top: 1rem;
-            display: flex;
-            color: black;
+            margin-top: 0rem;
         }
         
         .logo {
             position: relative;
             top: 0rem;
-            left: 3rem;
-            font-size: 8rem;
+            left: 0rem;
+            font-size: 9.5rem;
             font-weight: 900;
             color: black;
             float: left;
         }
         
-        .profile {
+        form {
+            position: absolute;
+            top: 30rem;
+            left: 5rem;
+            width: 100%;
+        }
+        /* -------------------------------------------- */
+        
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+        .search {
+            width: 100%;
             position: relative;
-            top: 0.8rem;
-            left: 10rem;
-            width: 100px;
-            height: 150px;
         }
         
-        .userID {
-            position: relative;
-            top: -8.5rem;
-            left: 7.5rem;
+        .searchTerm {
+            width: 61%;
+            height: 10rem;
+            border: 3px solid #00B4CC;
+            border-left: none;
+            padding-left: 10px;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            color: #9DBFAF;
             font-size: 3rem;
-            font-weight: 900;
         }
+        
+        .searchTerm:focus {
+            color: #00B4CC;
+        }
+        
+        .searchButton {
+            width: 13%;
+            height: 10rem;
+            border: 1px solid #00B4CC;
+            background: #00B4CC;
+            text-align: center;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 3rem;
+        }
+        /*Resize the wrap to see the search bar change!*/
+        /* -------------------------------------------*/
+        
+        select {
+            top: 0%;
+            width: 23%;
+            height: 10rem;
+            font-size: 3rem;
+            border: 2px solid black;
+            margin-left: 20px;
+        }
+        /* -------------------------------------------*/
         
         .VirtualView {
             position: relative;
-            top: 15rem;
-            left: 2rem;
+            top: 17rem;
+            left: 45rem;
             background-color: none;
-            width: 300px;
-            height: 600px;
+            width: 350px;
+            height: 700px;
             overflow: hidden;
         }
         /* 슬라이드 바 메뉴 보이기 & 메뉴 전체 영역 */
@@ -73,15 +104,15 @@
             padding-top: 20px;
             padding-left: 4.5rem;
             transition: transform 400ms;
-            transform: translate(-500px, 0px);
+            transform: translate(700px, 0px);
             -ms-transition: -ms-transform 300ms;
             -webkit-transition: -webkit-transform 400ms;
             -moz-transition: -moz-transform 300ms;
             -o-transition: -o-transform 300ms;
-            -ms-transform: translate(-500px, 0px);
-            -webkit-transform: translate(-500px, 0px);
-            -moz-transform: translate(-500px, 0px);
-            -o-transform: translate(-500px, 0px);
+            -ms-transform: translate(700px, 0px);
+            -webkit-transform: translate(700px, 0px);
+            -moz-transform: translate(700px, 0px);
+            -o-transform: translate(700px, 0px);
         }
         /* 숨겨진 슬라이드 메뉴 */
         
@@ -89,9 +120,9 @@
             font-family: 'Varela Round', sans-serif;
             padding-top: 10px;
             padding-bottom: 10px;
-            font-size: 20px;
+            font-size: 45px;
             width: 380px;
-            height: 50px;
+            height: 80px;
             line-height: 30px;
             vertical-align: middle;
             text-align: center;
@@ -125,8 +156,8 @@
             position: absolute;
             top: 0rem;
             left: 0rem;
-            width: 80px;
-            height: 75px;
+            width: 100px;
+            height: 100px;
         }
         
         .searching {
@@ -157,94 +188,41 @@
             height: 4rem;
             font-size: 2rem;
         }
-        
-        table {
-            position: relative;
-            left: -32rem;
-            font-size: 3rem;
-            width: 60rem;
-            overflow: hidden;
-        }
     </style>
 </head>
 
+
+
 <body>
-    <div class="wrap">
-        <div class="header">
-            <a href="../../user/main/main2.html">
-                <div class="logo position-fixed">Bi'Shop
-                </div>
-            </a>
 
+    <div id="wrap">
+        <div class="logo">Bi.Shop</div>
 
-            <div class="profile">
-                <img src="../../../images/my2.svg" alt="">
-                <p class="userID ">Admin</p>
-            </div>
+        <form action="">
+            <button type="submit" class="searchButton">
+                <img src="../../../images/glass.svg" alt="" style="width: 65px;">
+              <i class="fa fa-search"></i>
+           </button>
+            <input type="text" class="searchTerm" placeholder="    상품 검색">
 
-        </div>
-        <!-- 여기까지 헤더 -->
-        <!-- --------------슬라이드 메뉴 보이기------------------- -->
-        <!--
-            <div class="VirtualView ">
-
-                <div class="menubar ">
-                    <img src="../../../images/menu.svg " alt="menu" style="width: 75px; cursor: pointer;">
-                    <div class="circleBt " id="circleBt " onclick="showLeftMenu(); return false; "></div>
-                    <i class="icon-align-justify "></i>
-                </div>
-            </div>
-            -->
-        <!-- --------------------------------- -->
-
-
-
-        <form class="searching" action="" method="post" enctype="multipart/form-data">
-            <input type="text" class="search" placeholder="이름 검색">
-            <input class="search_click" type="submit">
-
-            <table border="1">
-
-                <th>ID</th>
-                <th>이름</th>
-                <th>모바일</th>
-                <th>주소</th>
-
-                <tr>
-                    <td>admin</td>
-                    <td>유형준</td>
-                    <td>010-4696-1364</td>
-                    <td>서울시 동작구</td>
-                </tr>
-                <tr>
-                    <td>없음</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>없음</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>없음</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-            </table>
+            <select name="oder_by" id="order_by">
+                <option value="new">최신순</option>
+                <option value="order">오래된순</option>
+                <option value="high">가격 높은순</option>
+                <option value="low">가격 낮은순</option>
+            </select>
         </form>
+
 
         <div class="VirtualView">
             <div class="hideMenuBody" id="hideMenuBodyId">
-                <div>아이디 검색</div>
-                <div>모바일 번호 검색</div>
-                <div>회원가입</div>
-                <div>회원삭제</div>
-                <div>회원정보 수정</div>
+                <div>NEW</div>
+                <div>BEST</div>
+                <div>SALE</div>
+                <div>OUTER</div>
+                <div>TOP</div>
+                <div>BOTTOM</div>
+                <div>BAG</div>
                 <div onclick="closeLeftMenu(); return false;">Close</div>
             </div>
 
@@ -259,7 +237,7 @@
             <div class="circleBt menubar" id="circleBt" src="../../../images/menu.svg " onclick="showLeftMenu(); return false;">
 
                 <i class="icon-align-justify"></i>
-                <img src="../../../images/menu.svg " alt="menu" style="width: 75px; cursor: pointer;">
+                <img src="../../../images/menu.svg " alt="menu" style="width: 100px; cursor: pointer;">
             </div>
         </div>
         <!-- 슬라이드 메뉴 -->
@@ -270,9 +248,8 @@
 
 
 
-    </div>
-    <!-- 여기까지 wrap -->
 
+    </div>
 
     <script>
         function showLeftMenu() {
@@ -295,6 +272,9 @@
             leftMenuObj.removeAttribute("style");
         }
     </script>
+
+
+
 </body>
 
 </html>

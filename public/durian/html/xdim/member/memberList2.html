@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../bootstrap/bootstrap-5.1.3-dist/css/bootstrap2.css">
+    <title>memberList2</title>
+
+    <style>
+        @media screen and (min-width: 1301px) {
+            .wrap {
+                width: 100%;
+            }
+            .logo {
+                font-size: 4rem;
+                font-weight: 900;
+                color: black;
+                cursor: pointer;
+            }
+            .manage {
+                font-size: 3.5rem;
+                font-weight: 700;
+                color: black;
+                position: relative;
+                margin-top: 0.7rem;
+                margin-left: 17rem;
+            }
+            select {
+                float: right;
+                width: 12rem;
+                height: 3rem;
+                margin-top: 2.3rem;
+                margin-right: 1rem;
+                font-size: 1.5rem;
+            }
+            .profile {
+                margin-top: -4.5rem;
+                margin-right: 25rem;
+                float: right;
+            }
+            .id {
+                position: relative;
+                left: 7rem;
+                top: -4.5rem;
+                font-size: 2rem;
+            }
+            .navbar {
+                position: relative;
+                top: 0rem;
+                width: 100%;
+                height: 5rem;
+            }
+            .info {
+                width: 90%;
+                margin-top: 3rem;
+                margin-left: 5rem;
+            }
+            table {}
+            td,
+            th {
+                border: 1px solid lightgray;
+                text-align: center;
+                font-size: 1.3rem;
+            }
+        }
+        /* ------------------------------------------------------------------------------------------------ */
+        
+        @media (min-width: 1201px) and (max-width: 1300px) {
+            .wrap {
+                width: 1300px;
+            }
+            .logo {
+                font-size: 4rem;
+                font-weight: 900;
+                color: black;
+                cursor: pointer;
+            }
+            .manage {
+                font-size: 3.5rem;
+                font-weight: 700;
+                color: black;
+                position: relative;
+                margin-top: 0.7rem;
+                margin-left: 17rem;
+            }
+            select {
+                position: absolute;
+                top: 4rem;
+                left: 63rem;
+                width: 12rem;
+                height: 3rem;
+                margin-top: 1.8rem;
+                margin-right: 1rem;
+                font-size: 1.5rem;
+            }
+            .profile {
+                position: absolute;
+                top: 1rem;
+                left: 47rem;
+            }
+            .id {
+                position: relative;
+                left: 7rem;
+                top: -4.5rem;
+                font-size: 2rem;
+            }
+            .navbar {
+                position: relative;
+                top: 4.7rem;
+                width: 100%;
+                height: 5rem;
+            }
+        }
+        /* ------------------------------------------------------------------------------------------------ */
+        
+        @media screen and (max-width: 1200px) {
+            .wrap {
+                width: 1200px;
+            }
+            .logo {
+                font-size: 4rem;
+                font-weight: 900;
+                color: black;
+                cursor: pointer;
+            }
+            .manage {
+                font-size: 3.5rem;
+                font-weight: 700;
+                color: black;
+                position: relative;
+                margin-top: 0.7rem;
+                margin-left: 17rem;
+            }
+            select {
+                position: absolute;
+                top: 4rem;
+                left: 63rem;
+                width: 12rem;
+                height: 3rem;
+                margin-top: 1.8rem;
+                margin-right: 1rem;
+                font-size: 1.5rem;
+            }
+            .profile {
+                position: absolute;
+                top: 1rem;
+                left: 47rem;
+            }
+            .id {
+                position: relative;
+                left: 7rem;
+                top: -4.5rem;
+                font-size: 2rem;
+            }
+            .navbar {
+                position: relative;
+                top: 4.7rem;
+                width: 1200px;
+                height: 5rem;
+            }
+        }
+    </style>
+</head>
+<!--  ----------------------------------------  본문 -------------------------------------------------------- -->
+
+<body>
+
+    <div class="wrap">
+        <!-- 로고 -->
+
+        <div class="logo dark position-absolute top-0 start-0" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+            Bi'Shop
+        </div>
+        <div class="manage">management</div>
+
+        <!-- 프로파일 -->
+        <div class="profile">
+            <img src="../../../images/my2.svg" alt="" style="width: 100px;">
+            <div class="id">Admin</div>
+        </div>
+
+        <!-- 언어 설정 -->
+        <select class="position-absolute top-0 end-0" name="language" id="language_select">
+        <option value="1" selected>Korea</option>
+        <option value="2">USA</option>
+       
+    </select>
+
+
+
+        <!-- 네비게이션 바 -->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: darksalmon;">
+            <div class="container-fluid">
+                <a class="navbar-brand" data-bs-toggle="modal" data-bs-target="#exampleModal1" href="#">Home</a>
+                <!-- 메인 페이지 -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#exampleModal2" href="#">Index</a>
+                            <!-- 인덱스 페이지 -->
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">관리자</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  검색조건
+                </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="이름 검색" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- 테이블  -->
+        <div class="info">
+            <table class="table table-hover">
+                <thead class="table-secondary">
+                    <th scope="col" style="width: 2.5%;">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+
+                        </div>
+                    </th>
+                    <th scope="col" style=" width: 4%; height: 3rem;">#</th>
+                    <th scope="col" style="width: 13%;">이름</th>
+                    <th scope="col" style="width: 10%;">아이디</th>
+                    <th scope="col" style="width: 8%;">등급</th>
+                    <th scope="col" style="width: 4%;">성별</th>
+                    <th scope="col" style="width: 10%;">모바일</th>
+                    <th scope="col" style="width: 10%;">이메일</th>
+                    <th scope="col" style="width: 10%;">국적</th>
+                    <th scope="col" style="width: 10%;">주소</th>
+                    <th scope="col">가입날짜</th>
+                    <th scope="col">extra</th>
+                </thead>
+                <tbody>
+                    <tr style="height: 3rem;">
+
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+
+                            </div>
+                        </td>
+                        <th scope="row">1</th>
+                        <td>유형준</td>
+                        <td>Admin</td>
+                        <td>관리자</td>
+                        <td>M</td>
+                        <td>010-1234-1234</td>
+                        <td>bishop@gamil.com</td>
+                        <td>Kor</td>
+                        <td>서울시 동작구</td>
+                        <td>2022.01.01</td>
+                        <td></td>
+
+                    </tr>
+
+                    <tr style="height: 3rem;">
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+
+                            </div>
+                        </td>
+                        <th scope="col">2</th>
+                        <td>데니스 리치</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr style="height: 3rem;">
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+
+                            </div>
+                        </td>
+                        <th scope="col">3</th>
+                        <td>리누스 토르발스</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr style="height: 3rem;">
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+
+                            </div>
+                        </td>
+                        <th scope="col">4</th>
+                        <td>스티브 워즈니악</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+    </div>
+
+    <!-- wrap -->
+
+
+
+
+    <!-- Modal Home 버튼 -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">메인페이지 이동</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    내용을 저장하지 않으시면 관련 정보가 보존되지 않습니다. 이동하시겠습니까?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                    <a href="../../user/main/main2.html"><button type="button" class="btn btn-primary">이동</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Index 버튼 -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Index 페이지 이동</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    내용을 저장하지 않으시면 관련 정보가 보존되지 않습니다. 이동하시겠습니까?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">이동</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 로고 버튼 -->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Index 페이지 이동</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    내용을 저장하지 않으시면 관련 정보가 보존되지 않습니다. 이동하시겠습니까?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                    <a href="../../user/main/main2.html"><button type="button" class="btn btn-primary">이동</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="../../../bootstrap/bootstrap-5.1.3-dist/js/bootstrap.js">
+    </script>
+</body>
+
+</html>
